@@ -33,7 +33,7 @@ app.get('/', (request, response) => {
 nasakey = 'iC3vGezsVjUwXz4DVYkhkHBHmaHFrycCLW0zrhPE';
 
 var result='';
-var country = 'canada'
+var country = 'canada';
 var getcapital = ((country) => {
     return new Promise((resolve, reject) =>{
         request({
@@ -71,7 +71,7 @@ var getWeather = ((city, country) => {
             });
         });
     });
-})
+});
 getcapital(country).then((capital) =>{
     getWeather(capital, country).then((weather) =>{
         result = `the weather in ${capital}, capital of ${country} is 
@@ -79,7 +79,14 @@ getcapital(country).then((capital) =>{
     })
 }).catch((error) =>{
     result = error;
-})
+});
+
+app.post('/get_weather', (request, response)=> {
+    var input = request.body.location;
+    console.log(request);
+    console.log(input)
+});
+
 
 app.get('/weather', (request, response)=> {
     response.render('weather.hbs', {
@@ -96,7 +103,7 @@ app.get('/404', (request, response) => {
         error: "page not found"
 
     })
-})
+});
 app.listen(port, () => {
     console.log(`server is up on the port ${port}`);
 });

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The weather!</title>
+</head>
+<body>
+{{> header title='Weather'}}
+<form action="/getweather" method="POST">
+    <input type="text" name="location">
+    <input type="submit">
+</form>
+{{weather}}
+<br/><br/>
+{{> footer}}
+</body>
+</html>

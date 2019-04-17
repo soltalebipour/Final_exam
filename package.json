@@ -1,0 +1,20 @@
+{
+  "name": "final_exam",
+  "version": "1.0.0",
+  "description": "\"# Final_exam\"",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/soltalebipour/Final_exam.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/soltalebipour/Final_exam/issues"
+  },
+  "homepage": "https://github.com/soltalebipour/Final_exam#readme"
+}
